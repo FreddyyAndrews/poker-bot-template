@@ -1,0 +1,12 @@
+# Rehearse against the local arena: `make mock` in one terminal, then
+# `make connect-mock` in another. Plays one match against a house bot.
+url: "http://127.0.0.1:8765"
+token: "dev-token"
+bot: {path: "mybot/bot.py"}
+matchmaking:
+  enabled: true
+  interval_s: 2
+  opponents: [house-tight]
+  formats:
+    - {seats: 2, hands: 100, reset_stacks: true, clock: {decision_s: 10, bank_s: 60}}
+records: {dir: "runs/arena"}

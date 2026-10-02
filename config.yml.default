@@ -1,0 +1,44 @@
+# Bridge settings for the arena (arena connect). Copy to config.yml and
+# set your token there or in ARENA_TOKEN. Never commit config.yml.
+
+url: "https://arena.example.com"   # the arena's address
+token: "${ARENA_TOKEN}"            # bot token from the arena website
+
+bot:
+  path: "mybot/bot.py"
+  docker: false
+  time_margin_s: 2                 # answer this much before the deadline
+
+challenge:                         # incoming challenges
+  accept: true
+  concurrency: 1                   # matches at once
+  modes: [casual, rated]
+  seats: [2, 3, 4, 5, 6, 7, 8, 9]
+  min_hands: 1
+  max_hands: 10000
+  min_decision_s: 5
+  allow_list: []
+  block_list: []
+
+matchmaking:                       # challenge online bots when idle
+  enabled: false
+  interval_s: 120
+  challenge_timeout_s: 60
+  decline_backoff_s: 1800
+  rated: false
+  opponents: []
+  block_list: []
+  formats:
+    - {seats: 2, hands: 200, reset_stacks: true, clock: {decision_s: 30, bank_s: 300}}
+
+seek:                              # queue for tables (3+ seats)
+  enabled: false
+  rated: false
+  formats:
+    - {seats: 6, hands: 300, clock: {decision_s: 30, bank_s: 600}}
+
+records:
+  dir: "runs/arena"                # your record of every arena match (arena/<id> in the tools)
+
+max_matches: 0
+log_level: "info"
