@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Toolkit output
+runs/
+.arena/
+
+# Secrets and local config
+config.yml
+.env
