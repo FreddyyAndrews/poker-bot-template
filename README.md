@@ -5,7 +5,9 @@ that you can develop locally and run on the poker arena. The
 [lichess-bot](https://github.com/lichess-bot-devs/lichess-bot) of poker.
 
 **Status:** planning. The layout and workflow below are the target; the
-files arrive with milestone 1 (see [Plan](#plan)).
+files arrive with milestone 1 (see [Plan](#plan)). This is a GitHub
+template repository: "Use this template" or fork it to start your own
+bot.
 
 ---
 
@@ -98,5 +100,5 @@ arena connect                               # play on the arena
 1. **Protocol and local loop:** P1-P3, plus P4 against the toolkit's mock
    server.
 2. **Arena alpha:** P4 against a local arena instance.
-3. **Public beta:** the template is made public and linked from the arena
-   website.
+3. **Public beta:** the arena website links here, and the template is
+   tested end to end against production.
